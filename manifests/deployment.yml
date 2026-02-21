@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kbindeshpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kbindeshpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kbindeshpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kbindeshpipelinesjavascriptdocker 
+          image: bincontainerregistry.azurecr.io/kbindeshpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
